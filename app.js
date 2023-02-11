@@ -53,7 +53,7 @@ const productos = [
 ];
 
 
-let carrito = [];   
+let carrito = JSON.parse(localStorage.getItem("cart")) || [];   
 
 productos.forEach((beers)=> {
     let beer = document.createElement("div");
@@ -90,9 +90,15 @@ productos.forEach((beers)=> {
          });
         }
         cartCount ();  
+        saveD ();
     })
 });
+    const saveD = () => {
+    localStorage.setItem("cart", JSON.stringify(carrito));
   
+    };
+
+
     const printCart = () => {
     
      cartContainer.style.display ="flex";
@@ -160,8 +166,11 @@ productos.forEach((beers)=> {
 
      const cartCount = () => {
         cartAmount.style.display = "block";
-        cartAmount.innerText = carrito.length;
+        const cartL = carrito.length;
+
+        localStorage.setItem("cartC", JSON.stringify(cartL))
+
+        cartAmount.innerText = JSON.parse(localStorage.getItem("cartC"))
      };
 
-    
-
+     cartCount();
