@@ -1,43 +1,42 @@
 const productos = [
     {
-        Precio: 250,
+        precio: 250,
         id: 1,
         title: 'Blond Ale',
-        thmbnaiUr: 'img\Blonde Ale.jpg', 
+        img: 'img/Blonde Ale.jpg', 
     } ,
 
     {
-        Precio: 250,
+        precio: 250,
         id: 2,
         title: 'Hefeweizen',
-        thmbnaiUrl: 'img\Hefeweizen.jpg', 
+        img: 'img/Hefeweizen.jpg', 
     },
 
     {
-        Precio: 250,
+        precio: 250,
         id: 3,
         title: 'Oatmeal Stout',
-        thmbnaiUrl: 'img\Oatmeal Stout.jpg',
+        img: 'img/Oatmeal Stout.jpg',
     },
 
     {
-        Precio: 250,
+        precio: 250,
         id: 4,
         title: 'Red Ale',
-        thmbnaiUrl: 'img\Irish Red Ale.jpg',
+        img: 'img/Irish Red Ale.jpg',
     },
     {
-        Precio: 1000,
+        precio: 1000,
         id: 5,
         title: 'Growler',
-        thmbnaiUrl: 'img\growler.jpg',
+        img: 'img/growler.jpg',
     },
 
     {
-        Precio: 8500,
+        precio: 8500,
         id: 6,
         title: 'Barril',
-        thmbnaiUrl: 'img\barriles.jpg',
-    }
-]
-
+        img: 'img/barriles.jpg',
+    },
+];
