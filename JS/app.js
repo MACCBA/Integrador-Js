@@ -78,7 +78,7 @@ productos.forEach((beers)=> {
             carrito.map((beerp) => {
                 if(beerp.id === beers.id) {
                     beerp.cantidad++;
-                }
+                   }
             });
         } else {
            carrito.push({
@@ -144,7 +144,7 @@ productos.forEach((beers)=> {
       
 
 
-    const sumaTotal = carrito.reduce((acu, beers) => acu + beers.precio*beers.cantidad, 0);
+    const sumaTotal = carrito.reduce((acu, beers) => acu + beers.precio * beers.cantidad, 0);
     
     const totalShop = document.createElement("div");
     totalShop.className = "suma-total"
@@ -161,6 +161,7 @@ productos.forEach((beers)=> {
             return beersId !== foundId;
         });
         cartCount();
+        saveD ();
         printCart();
     }; 
 
