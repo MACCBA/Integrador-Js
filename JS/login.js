@@ -5,7 +5,7 @@ function login () {
     password = document.getElementById("password").value;
    
     if ( user =="Admin" && password == "123456"){
-        window.location = "../HTML/index.html";
+        window.location = "../index.html";
     } else {
         alert ("Datos inccorrectos, favor de inentar nuevamente")
     }
