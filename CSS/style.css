@@ -39,13 +39,16 @@ body {
 .f-logo {
     width: 300px;
     height: 200px;
-    /* border: 1px solid black; */
+    /* border: 1px solid red; */
 }
 
 .fa-cart{
     gap: 5px;
 }
 
+.info-img:hover  {
+    -webkit-transform:scale(1.2);transform:scale(1.5);
+}
 .cart-counter{
     background-color: red;
     color: white;
@@ -58,17 +61,25 @@ body {
     display: none;
 }
 
-.cart-head {
-    display: flex;
-    gap: 50px;
-    padding: 20px;
-    align-items: center;
-    
+.cart-head{
+display: flex;
+gap: 50px;
+padding: 20px;
+align-items: center;
+flex-direction: row;
+width: 45%;
+/* text-align: center;
+border: 1px solid red;  */
+margin-right: 50%;
+font-size: medium;
 }
 
 .cross-title-button{
     color: yellow;
     cursor: pointer;
+    font-size: medium;
+    /* position: absolute;
+    margin-block-end: 10px; */
 }
 
 .dlt-beer{
@@ -382,12 +393,6 @@ h7 {
         border-end-end-radius: 20px;
         margin-right: 10%;
     }
-    
-    /* .f-logo {
-        margin-top: -5%;
-        width: 300px;
-        height: 280px;
-    } */
 
     .main-header-btn {
         margin-right: 4%;
@@ -422,6 +427,17 @@ h7 {
     h2 {
         margin-top: 10px;
     }
+
+    .cart-head{
+        margin-left: 70%;
+    }
+
+    .cross-title-button{
+        margin-left: 50%;
+        position: absolute;
+    }
+
+
   }
 
   @media (min-width: 1300px){
@@ -436,5 +452,11 @@ h7 {
         text-align: end;
     }
     
-    
+    .main-header-btn {
+        margin-right: 2%;
+    }
+    .info-img:hover  {
+        /* -webkit-transform:scale(1.2);transform:scale(1.5); */
+        transform: none;
+    }
   }
