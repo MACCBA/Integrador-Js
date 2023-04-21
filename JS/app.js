@@ -7,7 +7,7 @@ const productos = [
     {
         precio: 250,
         id: 1,
-        title: 'Blond Ale',
+        title: 'Blondale',
         img: 'img/Blonde Ale.jpg', 
         cantidad: 1,
     } ,
@@ -15,7 +15,7 @@ const productos = [
     {
         precio: 250, 
         id: 2,
-        title: 'Hefeweizen',
+        title: 'Hefewei',
         img: 'img/Hefeweizen.jpg', 
         cantidad: 1,
     },
@@ -23,7 +23,7 @@ const productos = [
     {
         precio: 250,
         id: 3,
-        title: 'Oatmeal Stout',
+        title: 'Oatmeal ',
         img: 'img/Oatmeal Stout.jpg',
         cantidad: 1,
     },
@@ -46,7 +46,7 @@ const productos = [
     {
         precio: 8500,
         id: 6,
-        title: 'Barril',
+        title: 'Barriles',
         img: 'img/barriles.jpg',
         cantidad: 1,
     },
@@ -130,16 +130,22 @@ productos.forEach((beers)=> {
        <p>${beers.precio} $ </p>
        <p>Cantidad: ${beers.cantidad}</p>
        <p>Total: ${beers.cantidad *beers.precio}</p> 
+       <span class= "dlt-beer"> ❌ </span> 
      `;
 
      cartContainer.append(cartContent);
 
-      let dlt = document.createElement("span");
-       dlt.innerText = "❌";
-       dlt.className = "dlt-beer";
-       cartContent.append (dlt);
+          let dlt = cartContent.querySelector(".dlt-beer");
+          dlt.addEventListener("click", ()=> {
+            dltBeer(beers.id);
+          });
 
-       dlt.addEventListener("click", dltBeer )
+    //    let dlt = document.createElement("span");
+    //    dlt.innerText = "❌";
+    //    dlt.className = "dlt-beer";
+    //    cartContent.append (dlt);
+
+    //    dlt.addEventListener("click", dltBeer )
      });
       
 
@@ -154,8 +160,8 @@ productos.forEach((beers)=> {
     
     lookCart.addEventListener("click", printCart);
     
-    const dltBeer = () => {
-        const foundId = carrito.find((beers) => beers.id );
+    const dltBeer = (id) => {
+        const foundId = carrito.find((beers) => beers.id === id);
 
         carrito = carrito.filter((beersId) => {
             return beersId !== foundId;
